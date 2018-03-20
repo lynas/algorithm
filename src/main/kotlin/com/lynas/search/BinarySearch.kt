@@ -23,3 +23,19 @@ fun main(args: Array<String>) {
 //    val array = arrayOf<Int>()
     println(binarySearch(array = array,arraySize = array.size,searchElement = 133))
 }
+
+/*
+* worst case
+* total steps = k
+* n -> n/2 -> n/4 -> .............. 1
+*
+* n/ 2^K = 1
+*
+* k = log`2 n
+*
+* O(log n)
+*
+*
+*
+*
+* */
