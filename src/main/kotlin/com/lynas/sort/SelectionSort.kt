@@ -1,20 +1,20 @@
 package com.lynas.sort
 
-fun selectionSort(A: Array<Int>, n: Int): Array<Int> {
-    for (i in 0 until n - 1) {
-        var iMin = i
-        for (j in i + 1 until n) {
-            if (A[j] < A[iMin]) {
-                iMin = j
+fun selectionSort(array: Array<Int>, arraySize: Int): Array<Int> {
+    for (i in 0 until arraySize - 1) {
+        var minValLocation = i
+        for (j in i + 1 until arraySize) {
+            if (array[j] < array[minValLocation]) {
+                minValLocation = j
 
             }
         }
-        val temp = A[i]
-        A[i] = A[iMin]
-        A[iMin] = temp
+        val temp = array[i]
+        array[i] = array[minValLocation]
+        array[minValLocation] = temp
 
     }
-    return A
+    return array
 }
 
 fun main(args: Array<String>) {
